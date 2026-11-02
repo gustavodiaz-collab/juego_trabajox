@@ -1,0 +1,39 @@
+PARQUE NACIONAL CHILOE — MULTIJUGADOR ONLINE
+
+IMPORTANTE SOBRE GITHUB PAGES
+GitHub Pages solo publica archivos estáticos y no puede ejecutar server.js ni mantener conexiones WebSocket. Por eso, subir el proyecto a GitHub Pages por sí solo NO activa el multijugador.
+
+FORMA RECOMENDADA: GITHUB + RENDER
+Este proyecto ya incluye render.yaml para desplegar el juego y el servidor juntos en Render.
+
+1. Sube estos archivos a la raíz de un repositorio de GitHub:
+   - index.html
+   - server.js
+   - package.json
+   - render.yaml
+   - LEEME.txt
+2. Entra a https://render.com/ y crea una cuenta.
+3. Elige New + → Blueprint (o Web Service si Blueprint no aparece).
+4. Conecta tu cuenta de GitHub y selecciona el repositorio donde subiste estos archivos.
+5. Si usas Blueprint, Render detectará render.yaml. Confirma la creación del servicio.
+   Si usas Web Service manual:
+   - Runtime: Node
+   - Build Command: npm install
+   - Start Command: npm start
+6. Espera a que Render termine el despliegue y quede en estado Live.
+7. Abre la dirección HTTPS que Render te entregue. Esa será la dirección para jugar; NO uses la URL de github.io.
+8. Comparte esa dirección con tus amigos. Todos deben entrar a la misma dirección y escribir el mismo código de sala.
+
+DETALLES
+- Hasta 8 jugadores por sala.
+- Salas con código.
+- Jugadores y persecución de Héctor sincronizados.
+- Game Over individual.
+- WASD: W adelante, S atrás, A izquierda, D derecha.
+- El servidor usa el puerto asignado automáticamente por Render.
+
+NOTAS
+- El plan gratuito de Render puede suspender el servicio cuando no se usa; el primer acceso puede tardar en despertar.
+- El código queda guardado en GitHub, pero el servidor debe ejecutarse en Render para que funcione el multijugador.
+- No se ha probado todavía una partida real entre dos computadores; después del despliegue, prueba con dos navegadores/dispositivos.
+- No incluí la canción de YouTube porque puede tener derechos de autor.
