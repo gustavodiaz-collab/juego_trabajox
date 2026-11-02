@@ -1,0 +1,29 @@
+# Parque Nacional Chiloé — Multijugador online
+
+## Qué incluye
+- Salas online con código (hasta 8 jugadores por sala).
+- Posiciones de jugadores sincronizadas.
+- Héctor compartido: cuando un jugador completa el diálogo, inicia la persecución para toda la sala.
+- El servidor mueve a Héctor y decide a quién alcanza.
+- Game Over individual al ser alcanzado.
+- Cara alternativa de Héctor mientras persigue.
+- WASD: W adelante, S atrás, A izquierda, D derecha.
+
+## Ejecutar en tu computador
+Necesitas Node.js instalado.
+
+1. Descomprime el proyecto.
+2. Abre una terminal dentro de esta carpeta.
+3. Ejecuta `npm install`.
+4. Ejecuta `npm start`.
+5. Abre `http://localhost:8080` en el navegador.
+6. Ambos jugadores deben conectarse al mismo servidor y escribir el mismo código de sala.
+
+## Para jugar por internet
+Este paquete contiene el servidor, pero todavía no está publicado en internet. Para jugar desde casas distintas, hay que desplegar esta carpeta en un hosting que admita Node.js y WebSockets, y compartir la dirección HTTPS del servidor. No basta con enviar el HTML.
+
+## Música
+No incluí el audio de YouTube directamente porque es una canción con derechos de autor. Puedes añadir una pista propia o con licencia adecuada si tienes permiso para usarla.
+
+## Nota
+La escena 3D se mantiene como en la versión anterior. El multijugador sincroniza jugadores y persecución mediante WebSockets.
